@@ -19,7 +19,7 @@ describe '投稿のテスト' do
   end
   describe '投稿画面のテスト' do
     before do
-      visit list_new_path
+      visit new_list_path
     end
     context '表示の確認' do
       it 'lists_new_pathが"/lists/new"であるか' do
@@ -87,7 +87,7 @@ describe '投稿のテスト' do
         expect(page).to have_field 'list[body]', with: list.body
       end
       it '保存ボタンが表示される' do
-        expect(page).to have_content '保存'
+        expect(page).to have_button '保存'
       end
     end
     context '更新処理に関するテスト' do

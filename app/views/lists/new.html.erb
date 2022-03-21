@@ -14,8 +14,12 @@
   <%= f.text_field :title %>
   <h4>本文</h4>
   <%= f.text_area :body %>
-  <h4>画像</h4>
-  <%= f.file_field :image, accept: 'image/*' %>
+    <!--コメントアウト for rspec-->
+    <% if false %>
+      <h4>画像</h4>
+      <%= f.file_field :image, accept: 'image/*' %>
+    <% end %>
+    <!--コメントアウト-->
 
   <%= f.submit '投稿' %>
 <% end %>
