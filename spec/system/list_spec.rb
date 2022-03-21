@@ -22,7 +22,7 @@ describe '投稿のテスト' do
       visit new_list_path
     end
     context '表示の確認' do
-      it 'lists_new_pathが"/lists/new"であるか' do
+      it 'new_list_pathが"/lists/new"であるか' do
         expect(current_path).to eq('/lists/new')
       end
       it '投稿ボタンが表示されているか' do
